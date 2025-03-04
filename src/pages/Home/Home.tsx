@@ -5,6 +5,7 @@ import './Home.css';
 import { useProductContext } from '../../context/ProductContext';
 import { useQuery } from '@tanstack/react-query';
 import { fetchProducts, fetchCategories } from '../../api/api';
+import Footer from '../../components/Footer';
 
 const Home = () => {
   const { products, dispatch, selectedCategory } = useProductContext();
@@ -61,6 +62,7 @@ const Home = () => {
           <ProductCard product={product} key={product.id} />
         ))}
       </div>
+      <Footer />
     </div>
   );
 };
